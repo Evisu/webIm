@@ -10,3 +10,8 @@
     <el-dropdown-item divided>蚵仔煎</el-dropdown-item>
   </el-dropdown-menu>
 </el-dropdown>
+
+
+body::-webkit-scrollbar { width:20px; height:2px; background:#ccc; border-radius:10px;/*外层轨道*/} 
+
+body::-webkit-scrollbar-thumb{ display:block; width:6px; margin:0 auto; border-radius: 10px; background:red;/*内层轨道*/}
