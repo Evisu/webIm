@@ -1,0 +1,19 @@
+syntax = "proto3";
+package com.jdyh.im.common.tcpprotocol.imwebsocket;
+option java_multiple_files = true;
+
+message ImWebSocket {
+    bytes type = 1;
+    // 登录,心跳,聊天,操作,拉取消息,拉取历史,状态上报 ProtocolActionEnum
+    // 1字节
+    bytes action = 2;
+    // 协议体长度
+    // 4字节
+    uint32 lenth = 3;
+    // body体crc32校验码
+    // 4字节
+    uint32 crc32 = 4;
+    // 协议体数据
+    bytes body = 5;
+}
+
